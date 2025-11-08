@@ -4,10 +4,11 @@ require('dotenv').config();
 const dbConfig = {
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  server: process.env.DB_SERVER,
+  server: process.env.DB_SERVER, // ← usa el valor corregido con doble backslash
   database: process.env.DB_DATABASE,
+  port: 1433, // ← ESTE ES EL QUE FALTABA
   options: {
-    encrypt: process.env.DB_ENCRYPT === 'true',
+    encrypt: false,
     trustServerCertificate: true
   }
 };
