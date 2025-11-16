@@ -1,0 +1,37 @@
+/* Fondo con imagen */
+.navbar-custom {
+  background-image: url("/imagen.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Color oscuro semi-transparente encima de la imagen */
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+
+  border-bottom: 3px solid #1e88e5;
+}
+
+/* Texto y logo más luminosos */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #ffffff !important;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* Botones */
+.btn-nav {
+  backdrop-filter: blur(3px);
+  border-radius: 8px;
+  font-weight: bold;
+  border: 2px solid #ffffff;
+  transition: 0.3s;
+}
+
+.btn-nav:hover {
+  background-color: #1e88e5 !important;
+  color: white !important;
+  border-color: #1e88e5;
+  transform: scale(1.05);
+}

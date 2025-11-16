@@ -120,3 +120,31 @@ SELECT * FROM RegistroTiempo;
 SELECT * FROM PrediccionTiempo;
 SELECT * FROM LogActualizacion;
 SELECT * FROM Usuario;
+
+INSERT INTO RegistroTiempo (id_puente, fecha_registro, tiempo_espera_min, tipo_dato)
+VALUES
+(1, '2025-02-01 07:15', 42, 'Histórico'),
+(1, '2025-02-01 08:00', 55, 'Actual'),
+(1, '2025-02-01 09:00', 60, 'Histórico'),
+(2, '2025-02-01 10:30', 28, 'Actual'),
+(2, '2025-02-01 11:00', 35, 'Histórico'),
+(2, '2025-02-01 12:00', 40, 'Actual'),
+(3, '2025-02-01 13:00', 20, 'Histórico'),
+(3, '2025-02-01 14:00', 25, 'Actual'),
+(4, '2025-02-01 15:00', 38, 'Histórico'),
+(4, '2025-02-01 16:00', 50, 'Actual'),
+(1, '2025-02-02 07:00', 45, 'Histórico'),
+(1, '2025-02-02 08:30', 58, 'Actual'),
+(2, '2025-02-02 09:15', 32, 'Histórico'),
+(2, '2025-02-02 10:00', 48, 'Actual'),
+(3, '2025-02-02 11:20', 22, 'Histórico'),
+(3, '2025-02-02 12:40', 30, 'Actual'),
+(4, '2025-02-02 14:50', 42, 'Histórico'),
+(4, '2025-02-02 16:15', 55, 'Actual');
+
+INSERT INTO PrediccionTiempo (id_registro, tiempo_estimado_min, modelo_utilizado, margen_error)
+VALUES
+(10, 52, 'Regresión lineal', 0.10),
+(11, 47, 'Promedio móvil', 0.12),
+(12, 61, 'Regresión lineal', 0.08),
+(13, 30, 'Red neuronal simple', 0.15);

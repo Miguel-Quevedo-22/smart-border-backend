@@ -1,30 +1,25 @@
-const API_URL = "http://localhost:3000/api";
+const API = "/api";
 
 export async function obtenerPuentes() {
-  const res = await fetch(`${API_URL}/puentes`);
-  return res.json();
+  const res = await fetch(`${API}/puentes`);
+  return await res.json();
 }
 
-export async function obtenerTiempos(id_puente) {
-  const res = await fetch(`${API_URL}/tiempos/${id_puente}`);
-  return res.json();
+export async function obtenerTiempos(id) {
+  const res = await fetch(`${API}/tiempos/${id}`);
+  return await res.json();
 }
 
-export async function obtenerPredicciones(id_puente) {
-  const res = await fetch(`${API_URL}/predicciones/${id_puente}`);
-  return res.json();
-}
-
-export async function filtrarTiempos(query) {
-  const res = await fetch(`${API_URL}/tiempos/filtro?${query}`);
-  return res.json();
+export async function obtenerPredicciones(id) {
+  const res = await fetch(`${API}/predicciones/${id}`);
+  return await res.json();
 }
 
 export async function agregarTiempo(data) {
-  const res = await fetch(`${API_URL}/tiempos/agregar`, {
+  const res = await fetch(`${API}/tiempos`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   });
-  return res.json();
+  return await res.json();
 }
